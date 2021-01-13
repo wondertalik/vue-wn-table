@@ -1,0 +1,9 @@
+export const GET_TABLE_DATA = "get-table-data";
+export const ON_TABLE_ROW_CLICKED = "on-row-clicked";
+export const ON_TABLE_SHOW_ACTION_CLICKED = "on-show-action-clicked";
+export const ON_TABLE_EDIT_ACTION_CLICKED = "on-edit-action-clicked";
+export const ON_TABLE_REMOVE_ACTION_CLICKED = "on-remove-action-clicked";
+export const ON_TABLE_ROW_UPDATED = "on-row-updated";
+export const ON_RESET_FILTERS = "on-reset-filters";
+export const PER_PAGE_BUTTON_CLICKED = "per-page-button-clicked";
+export const ROW_DRAGGABLE_MOVED = "raw-draggable-moved";
