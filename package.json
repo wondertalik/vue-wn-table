@@ -1,8 +1,10 @@
 {
   "name": "vue-wn-table",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "private": false,
-  "main": "dist/index.js",
+  "unpkg": "dist/vue-wn-table.umd.min.js",
+  "jsdelivr": "dist/vue-wn-table.umd.min.js",
+  "main": "dist/vue-wn-table.umd.min.js",
   "author": "Vitalii Koretskyi",
   "license": "MIT",
   "description": "A simple, clean data table for VueJS (2.x) with essential features like sorting, column filtering, pagination etc",
@@ -10,15 +12,23 @@
     "dist/*",
     "src/*"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wondertalik/vue-wn-table.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wondertalik/vue-wn-table/issues"
+  },
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build --target lib --name vue-wn-table src/main.js",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
   },
   "dependencies": {
+    "bootstrap": "^4.5.3",
+    "bootstrap-vue": "^2.21.2",
     "core-js": "^3.6.5"
   },
   "devDependencies": {
@@ -37,5 +47,8 @@
     "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.11",
     "vuepress": "^1.8.0"
+  },
+  "peerDependencies": {
+    "vue": "^2.6.11"
   }
 }

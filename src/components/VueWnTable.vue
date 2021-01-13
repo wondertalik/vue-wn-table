@@ -2,7 +2,7 @@
 
 <script>
 export default {
-  name: "VueWnTable"
+  name: "vue-wn-table"
 };
 </script>
 

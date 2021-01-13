@@ -1,1 +1,3 @@
-export { default as VueWnTable } from "./Table";
+import VueWnTable from "./VueWnTable.vue";
+
+export default VueWnTable;
