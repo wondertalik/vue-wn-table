@@ -1,10 +1,15 @@
 <template>
   <ul class="pagination pagination-sm m-0 float-right" v-if="pageNumbers.length > 0">
     <template v-for="page in pageNumbers">
-      <li class="page-item" :class="{ active: currentPage === page }" v-if="page !== '...'">
+      <li
+        class="page-item"
+        :class="{ active: currentPage === page }"
+        v-if="page !== '...'"
+        :key="page"
+      >
         <a class="page-link" @click.prevent="actionClick(page)">{{ page }}</a>
       </li>
-      <li class="page-item" v-else>
+      <li class="page-item" :key="page" v-else>
         <span class="page-link">{{ page }}</span>
       </li>
     </template>

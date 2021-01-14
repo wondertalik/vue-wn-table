@@ -72,7 +72,7 @@ export function parseDate(value) {
 }
 
 export function isset(val) {
-  return val !== undefined && val !== null;
+  return val !== undefined && val !== "undefined" && val !== null && val !== "null";
 }
 
 /**

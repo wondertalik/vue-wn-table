@@ -1,11 +1,11 @@
 <template>
   <div class="row">
     <div class="col-md-12">
-      <vue-my-table-filter-component
+      <vue-wn-table-filter-component
         @[onResetFilters]="resetFilters"
         :table-columns="tableColumns"
         :filters="filters"
-      ></vue-my-table-filter-component>
+      ></vue-wn-table-filter-component>
 
       <div class="card" :class="{ 'sk-loading': showSpinner }">
         <div class="sk-spinner sk-spinner-double-bounce" v-if="showSpinner">
@@ -59,11 +59,11 @@
         </div>
 
         <div class="card-footer clearfix" v-if="showPerPageToolbar && rows.length > 0">
-          <my-per-page-component
+          <vue-wn-per-page
             :per-page="perPage"
             :total="paginationOptions.total"
             @[perPageButtonClikedEvent]="perPageClicked"
-          ></my-per-page-component>
+          ></vue-wn-per-page>
 
           <vue-wn-show-table-count
             v-if="paginationOptions.total > 0"
@@ -140,13 +140,13 @@
                         <i class="fas fa-list"></i>
                         <span class="sr-only">Toggle Dropdown</span>
                         <div class="dropdown-menu" role="menu">
-                          <my-edit-drop-down-menu-item
+                          <vue-wn-edit-drop-down-menu-item
                             @click.stop="onEditActionClicked(row, $event)"
-                          ></my-edit-drop-down-menu-item>
+                          ></vue-wn-edit-drop-down-menu-item>
 
-                          <my-remove-drop-down-menu-item
+                          <vue-wn-remove-drop-down-menu-item
                             @click.stop="onRemoveActionClicked(row, $event)"
-                          ></my-remove-drop-down-menu-item>
+                          ></vue-wn-remove-drop-down-menu-item>
                         </div>
                       </button>
                       <button
@@ -195,11 +195,11 @@
         <div class="card-footer" v-if="showPerPageToolbar && rows.length > 0">
           <div class="row">
             <div class="col-md-12" style="text-align">
-              <my-per-page-component
+              <vue-wn-per-page
                 :per-page="perPage"
                 :total="paginationOptions.total"
                 @[perPageButtonClikedEvent]="perPageClicked"
-              ></my-per-page-component>
+              ></vue-wn-per-page>
 
               <vue-wn-show-table-count
                 v-if="paginationOptions.total > 0"
@@ -229,20 +229,22 @@ import {
   Row,
   SortingColumn,
   SearchingColumn,
-  FilterField,
-  VueMyTableFilterComponent
-} from "./index";
+  FilterField
+} from "@/components/types";
+
+import { VueWnTableFilterComponent } from "@/components/filters";
 
 import { PER_PAGE_BUTTON_CLICKED } from "./table-events";
 
 import VueWnPaginator from "./VueWnPaginator.vue";
 import VueWnShowTableCount from "./VueWnShowTableCount.vue";
 
-import MyRemoveDropDownMenuItem from "../table/MyRemoveDropDownMenuItem";
-import MyEditDropDownMenuItem from "../table/MyEditDropDownMenuItem";
-import MyPerPageComponent from "../table/MyPerPageComponent";
+import VueWnRemoveDropDownMenuItem from "./menu/VueWnRemoveDropDownMenuItem";
+import VueWnEditDropDownMenuItem from "./menu/VueWnEditDropDownMenuItem";
+import VueWnPerPage from "./VueWnPerPage.vue";
+
 import * as events from "./table-events";
-import { FormattedNumberField } from "../../components/form";
+import { FormattedNumberField } from "./formatted";
 
 import draggable from "vuedraggable";
 
@@ -260,10 +262,10 @@ export default {
     draggable,
     VueWnPaginator,
     VueWnShowTableCount,
-    MyPerPageComponent,
-    VueMyTableFilterComponent,
-    MyRemoveDropDownMenuItem,
-    MyEditDropDownMenuItem,
+    VueWnPerPage,
+    VueWnTableFilterComponent,
+    VueWnRemoveDropDownMenuItem,
+    VueWnEditDropDownMenuItem,
     FormattedNumberField
   },
   props: {
