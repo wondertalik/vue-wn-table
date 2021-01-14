@@ -230,9 +230,9 @@ import {
   SortingColumn,
   SearchingColumn,
   FilterField
-} from "@/components/types";
+} from "@/components/table/types";
 
-import { VueWnTableFilterComponent } from "@/components/filters";
+import { VueWnTableFilterComponent } from "@/components/table/filters";
 
 import { PER_PAGE_BUTTON_CLICKED } from "./table-events";
 

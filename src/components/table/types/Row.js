@@ -1,4 +1,4 @@
-import { deepCopy } from "@/components/utils/functions";
+import { deepCopy } from "@/components/table/utils/functions";
 
 export default class Row {
   /**

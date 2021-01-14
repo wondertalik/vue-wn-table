@@ -1,4 +1,4 @@
-import VueWnTable from "./components";
+import VueWnTable from "./components/table";
 
 // Declare install function executed by Vue.use()
 export function install(Vue) {

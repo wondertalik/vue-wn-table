@@ -4,7 +4,7 @@
 
 <script>
 import { Formatter } from "./index";
-import { isset } from "@/components/utils/functions";
+import { isset } from "@/components/table/utils/functions";
 import { Currency } from "../types";
 
 export default {

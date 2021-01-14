@@ -12,8 +12,8 @@
 </template>
 
 <script>
-import { ListFilterField, Column } from "@/components/types";
-import { VueWnTableFilterOperator } from "@/components/filters";
+import { ListFilterField, Column } from "@/components/table/types";
+import { VueWnTableFilterOperator } from "@/components/table/filters";
 
 export default {
   props: {

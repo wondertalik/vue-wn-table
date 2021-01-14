@@ -21,9 +21,9 @@
 </template>
 
 <script>
-import { DateRangeFilterField, Column } from "@/components/types";
-import { FormattedDateField } from "@/components/formatted";
-import { VueWnTableFilterOperator } from "@/components/filters";
+import { DateRangeFilterField, Column } from "@/components/table/types";
+import { FormattedDateField } from "@/components/table/formatted";
+import { VueWnTableFilterOperator } from "@/components/table/filters";
 
 export default {
   props: {

@@ -5,7 +5,7 @@
 <script>
 import { format } from "date-fns";
 
-import { parseDate, isset } from "@/components/utils/functions";
+import { parseDate, isset } from "@/components/table/utils/functions";
 
 export default {
   props: {

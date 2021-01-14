@@ -27,11 +27,16 @@
 </template>
 
 <script>
-import { Column, FilterField, DateRangeFilterField, ListFilterField } from "@/components/types";
+import {
+  Column,
+  FilterField,
+  DateRangeFilterField,
+  ListFilterField
+} from "@/components/table/types";
 
-import { ON_RESET_FILTERS } from "@/components/table-events";
+import { ON_RESET_FILTERS } from "@/components/table/table-events";
 
-import { VueWnTableDateRangeFilter, VueWnTableListFilter } from "@/components/filters";
+import { VueWnTableDateRangeFilter, VueWnTableListFilter } from "@/components/table/filters";
 
 export default {
   props: {
